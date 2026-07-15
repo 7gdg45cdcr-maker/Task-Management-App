@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1>✅ Task Manager</h1>
+            <div id="auth-buttons">
+                <button onclick="showLogin()">Login</button>
+                <button onclick="showRegister()">Register</button>
+            </div>
+            <div id="user-info" style="display:none;">
+                <span id="username-display"></span>
+                <button onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div id="login-form" class="form-container">
+            <h2>Login</h2>
+            <input type="email" id="login-email" placeholder="Email">
+            <input type="password" id="login-password" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <p>Don't have an account? <a href="#" onclick="showRegister()">Register</a></p>
+        </div>
+
+        <div id="register-form" class="form-container" style="display:none;">
+            <h2>Register</h2>
+            <input type="text" id="register-username" placeholder="Username">
+            <input type="email" id="register-email" placeholder="Email">
+            <input type="password" id="register-password" placeholder="Password">
+            <button onclick="register()">Register</button>
+            <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+        </div>
+
+        <div id="task-manager" style="display:none;">
+            <div class="task-header">
+                <h2>My Tasks</h2>
+                <button onclick="showAddTask()">+ Add Task</button>
+            </div>
+
+            <div id="task-form" style="display:none;">
+                <input type="text" id="task-title" placeholder="Task Title">
+                <textarea id="task-description" placeholder="Description"></textarea>
+                <select id="task-priority">
+                    <option value="low">Low</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <select id="task-status">
+                    <option value="pending">Pending</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+                <input type="date" id="task-due">
+                <button onclick="addTask()">Save Task</button>
+                <button onclick="cancelAddTask()">Cancel</button>
+            </div>
+
+            <div id="task-list">
+                <p style="text-align:center;color:#636e72;">Loading tasks...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/tasks.js"></script>
+</body>
+</html>

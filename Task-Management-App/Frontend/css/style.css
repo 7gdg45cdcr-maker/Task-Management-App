@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f0f2f5;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar {
+    background: #2d3436;
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    font-size: 1.5rem;
+}
+
+.navbar button {
+    background: #0984e3;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+
+.navbar button:hover {
+    background: #0873c7;
+}
+
+.form-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin: 2rem 0;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-container h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 0.75rem;
+    background: #0984e3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background: #0873c7;
+}
+
+.form-container p {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.form-container a {
+    color: #0984e3;
+    cursor: pointer;
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0 1rem;
+}
+
+.task-header button {
+    background: #00b894;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.task-header button:hover {
+    background: #00a381;
+}
+
+#task-form {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+}
+
+#task-form input,
+#task-form textarea,
+#task-form select {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+#task-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+#task-form button {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+
+#task-form button:first-of-type {
+    background: #0984e3;
+    color: white;
+}
+
+#task-form button:last-of-type {
+    background: #e17055;
+    color: white;
+}
+
+.task-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+    border-left: 4px solid #00b894;
+}
+
+.task-card .title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.task-card .description {
+    color: #636e72;
+    margin-bottom: 0.5rem;
+}
+
+.task-card .meta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+}
+
+.task-card .meta span {
+    background: #f0f2f5;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.task-card .actions button {
+    padding: 0.25rem 0.75rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+
+.task-card .actions .edit-btn {
+    background: #fdcb6e;
+    color: #2d3436;
+}
+
+.task-card .actions .delete-btn {
+    background: #e17055;
+    color: white;
+}
+
+.priority-high { border-left-color: #e17055; }
+.priority-medium { border-left-color: #fdcb6e; }
+.priority-low { border-left-color: #00b894; }
+
+.status-completed .title {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+#user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#user-info span {
+    color: #dfe6e9;
+}
+
+@media (max-width: 600px) {
+    .navbar .container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .task-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .task-card .meta {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+}
